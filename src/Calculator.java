@@ -13,7 +13,7 @@ public class Calculator {
 
             switch (type) {
                 case 1:
-                    int value = valueReceiver();
+                    double value = valueReceiver();
                     System.out.println("Converting Fahrenheit to Celsius");
                     result(convertFtoC(value), type);
                     break;
@@ -52,7 +52,7 @@ public class Calculator {
         public static int valueReceiver () {
 
             System.out.print("Ok, please type the value: ");
-            int value = new Scanner(System.in).nextInt();
+            int double = new Scanner(System.in).nextDouble();
             return value; //não consegui retornar direto
         }
 
