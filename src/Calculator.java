@@ -1,5 +1,3 @@
-import com.sun.jdi.Value;
-
 import java.util.Scanner;
 
 public class Calculator {
@@ -12,13 +10,13 @@ public class Calculator {
 
         value1 = Double.parseDouble(ValueReceiverC.nextLine());
 
-            value1 = (value1 * 1.8) + 32;
+        value1 = (value1 * 1.8) + 32;
 
-            value1 = value1 * 100;
-            value1 = Math.round(value1);
-            value1 = value1 / 100;
-            FV = String.valueOf(value1);
-            FV = FV.replace('.', ',');
+        value1 = value1 * 100;
+        value1 = Math.round(value1);
+        value1 = value1 / 100;
+        FV = String.valueOf(value1);
+        FV = FV.replace('.', ',');
 
         return FV;
 
@@ -32,13 +30,13 @@ public class Calculator {
 
         value2 = Double.parseDouble(ValueReceiverF.nextLine());
 
-            value2 = (value2 - 32) / 1.8;
+        value2 = (value2 - 32) / 1.8;
 
-            value2 = value2 * 100;
-            value2 = Math.round(value2);
-            value2 = value2 / 100;
-            FV = String.valueOf(value2);
-            FV = FV.replace('.', ',');
+        value2 = value2 * 100;
+        value2 = Math.round(value2);
+        value2 = value2 / 100;
+        FV = String.valueOf(value2);
+        FV = FV.replace('.', ',');
 
 
         return FV;
@@ -64,7 +62,7 @@ public class Calculator {
                 String FinalResultC = CalculumToC();
                 System.out.println(FinalResultC + " Fº is the result");
 
-                    //continue
+                //continue
 
             }else if(type == 1){
 
@@ -73,7 +71,7 @@ public class Calculator {
                 String FinalResultF = CalculumToF();
                 System.out.println(FinalResultF + " Cº is the result");
 
-                    //continue
+                //continue
 
             }else if(type == 3) {
                 System.out.println("Bye bye");
