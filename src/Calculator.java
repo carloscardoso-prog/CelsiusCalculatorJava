@@ -10,19 +10,24 @@ public class Calculator {
             printMenu();
 
             type = new Scanner(System.in).nextInt();
-            int value = valueReceiver();
 
             switch (type) {
                 case 1:
-
+                    int value = valueReceiver();
+                    System.out.println("Converting Fahrenheit to Celsius");
                     result(convertFtoC(value), type);
                     break;
-                case 2:
 
+                case 2:
+                    value = valueReceiver();
+                    System.out.println("Converting Celsius to Fahrenheit");
                     result(convertCtoF(value), type);
                     break;
-                default:
 
+                case 3:
+                    break;
+
+                default:
                     System.out.println("Sorry, couldn't understand");
                     continue;
 
