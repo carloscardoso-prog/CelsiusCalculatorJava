@@ -1,44 +1,47 @@
+import com.sun.jdi.Value;
+
 import java.util.Scanner;
 
 public class Calculator {
 
-    public static double CalculumToC(){
+    public static String CalculumToC(){
         Scanner ValueReceiverC = new Scanner(System.in);
 
         double value1;
+        String FV;
 
-        value1 = ValueReceiverC.nextInt();
-
-            ValueReceiverC.nextLine();
+        value1 = Double.parseDouble(ValueReceiverC.nextLine());
 
             value1 = (value1 * 1.8) + 32;
 
             value1 = value1 * 100;
             value1 = Math.round(value1);
             value1 = value1 / 100;
+            FV = String.valueOf(value1);
+            FV = FV.replace('.', ',');
 
-            return value1;
+        return FV;
 
     }
 
-    public static double CalculumToF(){
+    public static String CalculumToF(){
         Scanner ValueReceiverF = new Scanner(System.in);
 
         double value2;
+        String FV;
 
-        value2 = ValueReceiverF.nextInt();
-
-            ValueReceiverF.nextLine();
+        value2 = Double.parseDouble(ValueReceiverF.nextLine());
 
             value2 = (value2 - 32) / 1.8;
 
             value2 = value2 * 100;
             value2 = Math.round(value2);
             value2 = value2 / 100;
-            System.out.println("valor é " + value2);
+            FV = String.valueOf(value2);
+            FV = FV.replace('.', ',');
 
 
-        return value2;
+        return FV;
 
     }
 
@@ -58,7 +61,7 @@ public class Calculator {
 
                 System.out.println("Converting Cº to Fº");
                 System.out.println("Please type the value");
-                double FinalResultC = CalculumToC();
+                String FinalResultC = CalculumToC();
                 System.out.println(FinalResultC + " Fº is the result");
 
                     //continue
@@ -67,7 +70,7 @@ public class Calculator {
 
                 System.out.println("Converting Fº to Cº");
                 System.out.println("Please type the value");
-                double FinalResultF = CalculumToF();
+                String FinalResultF = CalculumToF();
                 System.out.println(FinalResultF + " Cº is the result");
 
                     //continue
